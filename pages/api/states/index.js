@@ -104,7 +104,7 @@ const editUnidades = async (req, res) => {
 
         //await db.Unidades.save();
         res.json({
-            message: 'La unidad fue actualizada correctamente.'
+            message: 'Se actualizo el estado'
         });
     } catch (error) {
         console.log(error);
@@ -138,7 +138,7 @@ const deleteUnidades = async (req, res) => {
         });
 
         res.json({
-            message: 'La unidad fue eliminada correctamente.'
+            message: 'El estado fue eliminado correctamente.'
         });
     } catch (error) {
         console.log(error);

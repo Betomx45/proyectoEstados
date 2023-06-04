@@ -18,6 +18,8 @@ if (config.use_env_variable) {
 }
 
 import states from './states';
+import town from './town';
+
 /*
 fs
   .readdirSync(__dirname)
@@ -36,6 +38,7 @@ fs
   */
 
 db.States =states(sequelize,Sequelize.DataTypes);
+db.Town= town(sequelize,Sequelize.DataTypes);
 
 Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {

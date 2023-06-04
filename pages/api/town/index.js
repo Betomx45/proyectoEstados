@@ -23,7 +23,7 @@ const addUnidades = async (req, res) => {
         //console.log(req.body);
 
         //guardar los datos del cliente
-        const unid = await db.States.create({ ...req.body });
+        const unid = await db.Town.create({ ...req.body });
 
         res.json({
             unid,
@@ -64,14 +64,14 @@ const unidadesList = async (req, res) => {
         let unidads = [];
 
         if (estadoId) {
-            unidads = await db.States.findAll({
+            unidads = await db.Town.findAll({
                 where: {
                     estadoId,
                 },
             });
         } else {
             unidads = await db.States.findAll({
-                include: ['town'],
+                include: ['ruta'],
             });
         }
 

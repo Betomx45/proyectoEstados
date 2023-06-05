@@ -71,7 +71,7 @@ const unidadesList = async (req, res) => {
             });
         } else {
             unidads = await db.Town.findAll({
-                include: ['states'],
+                include: ['states', 'localities'],
             });
         }
 
